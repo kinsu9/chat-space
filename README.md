@@ -2,8 +2,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|refarence|null: false, foreign_key: true|
+|group_id|refarence|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :groups
@@ -30,8 +30,8 @@ deviceでカラム追加されるのでnameだけで大丈夫だと思います�
 |------|----|-------|
 |text|text|     |
 |image|text|       |
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|refarence|null: false, foreign_key: true|
+|group_id|refarence|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :groups
