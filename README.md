@@ -2,12 +2,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|refarences|null: false, foreign_key: true|
-|group_id|refarences|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
 
 
 ## usersテーブル
@@ -31,19 +31,19 @@ deviseでカラムが追加されるのでnameだけで大丈夫だと思いま�
 |------|----|-------|
 |text|text|     |
 |image|text|       |
-|user_id|refarences|null: false, foreign_key: true|
-|group_id|refarences|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
 
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true|
+|name|string|  |
 
 ### Association
 - has_many :messages
