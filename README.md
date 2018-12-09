@@ -11,7 +11,7 @@
 
 
 ## usersテーブル
-deviceでカラム追加されるのでnameだけで大丈夫だと思いますが念の為
+deviseでカラムが追加されるのでnameだけで大丈夫だと思いますが念の為
 
 |Column|Type|Options|
 |------|----|-------|
@@ -21,7 +21,7 @@ deviceでカラム追加されるのでnameだけで大丈夫だと思います�
 
 ### Association
 - has_many :members
-- has_many :groups, :throug => :members
+- has_many :groups, :through: :members
 
 
 ## messagesテーブル
@@ -46,5 +46,5 @@ deviceでカラム追加されるのでnameだけで大丈夫だと思います�
 
 ### Association
 - belongs_to :members
-- belongs_to :users, :throug => :members
+- belongs_to :users, :through: :members
 
