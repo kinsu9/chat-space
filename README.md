@@ -2,8 +2,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|refarence|null: false, foreign_key: true|
-|group_id|refarence|null: false, foreign_key: true|
+|user_id|refarences|null: false, foreign_key: true|
+|group_id|refarences|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :groups
@@ -15,13 +15,14 @@ deviseでカラムが追加されるのでnameだけで大丈夫だと思いま�
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|     |
+|name|string|index: true|
 |email|string|     |
 |password|string|     |
 
 ### Association
+- has_many :messages
 - has_many :members
-- has_many :groups, :through: :members
+- has_many :groups, through: :members
 
 
 ## messagesテーブル
@@ -30,8 +31,8 @@ deviseでカラムが追加されるのでnameだけで大丈夫だと思いま�
 |------|----|-------|
 |text|text|     |
 |image|text|       |
-|user_id|refarence|null: false, foreign_key: true|
-|group_id|refarence|null: false, foreign_key: true|
+|user_id|refarences|null: false, foreign_key: true|
+|group_id|refarences|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :groups
@@ -42,9 +43,10 @@ deviseでカラムが追加されるのでnameだけで大丈夫だと思いま�
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|      |
+|name|string|index: true|
 
 ### Association
-- belongs_to :members
-- belongs_to :users, :through: :members
+- has_many :messages
+- has_many :members
+- has_many :users, through: :members
 
