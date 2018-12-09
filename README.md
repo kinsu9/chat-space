@@ -6,11 +6,12 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :groups
+- belongs_to :users
 
 
 ## usersテーブル
+deviceでカラム追加されるのでnameだけで大丈夫だと思いますが念の為
 
 |Column|Type|Options|
 |------|----|-------|
@@ -20,10 +21,10 @@
 
 ### Association
 - has_many :members
-- has_many :messages
+- has_many :groups, :throug => :members
 
 
-## messageテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -33,17 +34,17 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :groups
+- belongs_to :users
 
 
-## groupテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|      |
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :members
+- belongs_to :users, :throug => :members
 
