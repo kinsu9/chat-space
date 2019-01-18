@@ -1,9 +1,8 @@
 .form
-  %form#new_message.js-form{"accept-charset" => "UTF-8", :action => "/groups/28052/messages", :enctype => "multipart/form-data", :method => "post"}
-    %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-    %input{:name => "authenticity_token", :type => "hidden", :value => "aGOM8V0EvxfTDhILkygkeRYjQxy6i7Py4pWPeFV5eI2qE5/76aIQK/og0ixt7nlA4kSMpZ/2bf5g1WHsVo0TCg=="}/
-    %input#message_content.form__message.js-content{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+  %form#new_message.js-form{action: "/groups/28052/messages", enctype: "multipart/form-data", method: "post"}
+    %input{name: "authenticity_token", type: "hidden", value: "aGOM8V0EvxfTDhILkygkeRYjQxy6i7Py4pWPeFV5eI2qE5/76aIQK/og0ixt7nlA4kSMpZ/2bf5g1WHsVo0TCg=="}/
+    %input#message_content.form__message.js-content{name: "message[content]", placeholder: "type a message", type: "text"}/
     .form__mask
-      %label.form__mask__image{:for => "message_image"}
+      %label.form__mask__image{for: "message_image"}
         %i.fa.fa-picture-o.icon
-    %input.form__submit{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+    %input.form__submit{name: "commit", type: "submit", value: "Send"}/
