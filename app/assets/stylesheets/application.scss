@@ -1,6 +1,6 @@
 @import "config/reset";
 @import "font-awesome";
-@import "modules/wrapper";
+@import "modules/module/wrapper";
 @import "modules/side-bar/side-bar";
 @import "modules/side-bar/side-bar-users";
 @import "modules/side-bar/side-bar-groups";
@@ -8,3 +8,7 @@
 @import "modules/chat/chat.header";
 @import "modules/chat/chat.messages";
 @import "modules/chat/form";
+@import "modules/chat/user";
+@import "config/colors";
+@import "modules/module/flash";
+@import "modules/module/group";
