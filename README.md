@@ -49,4 +49,3 @@ deviseでカラムが追加されるのでnameだけで大丈夫だと思いま�
 - has_many :messages
 - has_many :members
 - has_many :users, through: :members
-
