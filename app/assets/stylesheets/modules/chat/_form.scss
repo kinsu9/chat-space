@@ -1,62 +1,45 @@
 .form {
-  background-color: #DDDDDD;
-  box-sizing: border-box;
   height: 90px;
-  padding: 20px 50px 20px 40px;
-  .input {
-    text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    text-align: start;
-    font: 400 11px system-ui;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-  }
-  .input[type="hidden" i] {
-    display: none;
-    -webkit-appearance: initial;
-    background-color: initial;
-    cursor: default;
-    border: initial;
-  }
-    &__mask {
-      background-color: #fff;
-      float: left;
-      height: 50px;
-      padding-right: 10px;
+  padding: 20px 40px;
+  background-color: #DDDDDD;
+  .new_message {
+    display: flex;
+    .input-box {
+      position: relative;
+      width: 100%;
+      &__text {
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none;
+      }
       &__image {
-        font-size: 20px;
-        line-height: 50px;
+        font-size: 1.3rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
         .fa {
           display: inline-block;
-          font: normal normal normal 14px/1 ;
+          font: normal normal normal 14px/1 FontAwesome;
           font-size: inherit;
           text-rendering: auto;
           -webkit-font-smoothing: antialiased;
         }
+        &__file {
+          display: none;
+        }
       }
     }
-    &__message {
-      border: none;
-      box-sizing: border-box;
-      float: left;
+    .submit-btn{
+      width: 100px;
       height: 50px;
-      padding: 0 10px;
-      width: calc(100% - 150px);
-    }
-    .form__submit {
-      background-color: #38AEF0;
-      border: none;
-      color: #fff;
-      float: right;
-      font-size: 16px;
-      height: 50px;
-      margin-left: 15px;
       padding: 0 30px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: #fff;
+      cursor: pointer;
     }
+  }
 }
