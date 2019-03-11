@@ -1,4 +1,5 @@
 .form
+<<<<<<< HEAD
   = form_for [@group, @message] do |f|
     .input-box
       = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
@@ -6,3 +7,12 @@
         = fa_icon 'picture-o', class: 'icon'
         = f.file_field :image, class: 'input-box__image__file'
     = f.submit 'Send', class: 'submit-btn'
+=======
+  %form#new_message.js-form{action: "/groups/messages", enctype: "multipart/form-data", method: "post"}
+    %input{name: "authenticity_token", type: "hidden", value: "aGOM8V0EvxfTDhILkygkeRYjQxy6i7Py4pWPeFV5eI2qE5/76aIQK/og0ixt7nlA4kSMpZ/2bf5g1WHsVo0TCg=="}/
+    %input#message_content.form__message.js-content{name: "message[content]", placeholder: "type a message", type: "text"}/
+    .form__
+      %label.form__mask__image{for: "message_image"}
+        %i.fa.fa-picture-o.icon
+    %input.form__submit{name: "commit", type: "submit", value: "Send"}/
+>>>>>>> master

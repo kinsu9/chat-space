@@ -43,7 +43,7 @@ deviseでカラムが追加されるのでnameだけで大丈夫だと思いま�
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false,|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
