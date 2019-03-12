@@ -5,6 +5,7 @@
     %ul.left-header__members
       Member：
       %li.member
-        test_kaneko
+        - @user.each do |member|
+          = member.name
   .right-header
     = link_to "Edit", "#", class: "button"
