@@ -1,9 +1,25 @@
 .wrapper
   .side-bar
-    = render "shared/side-bar_users"
-    = render "shared/side-bar_groups"
+    = render "shared/side-bar"
   .chat
-    = render "messages/chat_header"
+    .header
+      .left-header
+        .left-header__title
+          = @group.name
+        %ul.left-header__members
+          Member：
+          %li.member
+            - @group.users.each do |member|
+              = member.name
+      .right-header
+        = link_to "Edit", "#", class: "button"
     .messages
       = render @messages
-    = render "messages/chat_form"
+    .form
+      = form_for [@group, @message] do |f|
+        .input-box
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.label :image,class: 'input-box__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'input-box__image__file'
+        = f.submit 'Send', class: 'submit-btn'
