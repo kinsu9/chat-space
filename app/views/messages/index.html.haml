@@ -4,7 +4,7 @@
   .chat
     .header
       .left-header
-        .left-header__title
+        .left-header__title{group_id: @group.id}
           = @group.name
         %ul.left-header__members
           Member：
@@ -12,7 +12,7 @@
             - @group.users.each do |member|
               = member.name
       .right-header
-        = link_to "Edit", edit_group_path(@group), class: "button"
+        = link_to "Edit", edit_group_path(@group[:id]), class: "button"
     .messages
       = render @messages
     .form
