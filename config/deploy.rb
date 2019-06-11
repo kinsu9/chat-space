@@ -11,7 +11,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1p57'
 
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/kinsuec2.pem']
+                  keys: ['~/.ssh/testec2.pem']
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
