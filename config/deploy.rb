@@ -10,6 +10,8 @@ set :rbenv_type, :user
 
 set :rbenv_ruby, '2.5.1p57'
 
+set :rbenv_path, '/root/.rbenv'
+
 set :ssh_options, auth_methods: ['publickey'],
                   keys: ['~/.ssh/testec2.pem']
 
